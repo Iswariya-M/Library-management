@@ -1,0 +1,41 @@
+<app-nav></app-nav><div class="container">
+    <h2>Add Book</h2>
+    <form (submit)="addBook()">
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="title" name="title" required><br>
+      
+      <label>Author:</label>
+      <input type="text" [(ngModel)]="author" name="author" required><br>
+      
+      <label>Subject:</label>
+      <input type="text" [(ngModel)]="subject" name="subject" required><br>
+      
+      <label>Publish Date:</label>
+      <input type="date" [(ngModel)]="publishDate" name="publishDate" required><br>
+      
+      <button type="submit">Add Book</button>
+    </form>
+</div>
+<br>
+  
+  <div class="box">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Subject</th>
+          <th>Publish Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.subject }}</td>
+          <td>{{ formatDate( book.publish_date ) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

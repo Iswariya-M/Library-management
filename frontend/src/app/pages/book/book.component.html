@@ -1,0 +1,57 @@
+<body>
+    <app-nav></app-nav>
+
+    <main>
+        <div class="container">
+            <br>
+            <h2>Books</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by Title" [(ngModel)]="titleSearch" (keyup)="performSearch()">
+                <input type="text" placeholder="Search by Author" [(ngModel)]="authorSearch" (keyup)="performSearch()">
+                <input type="text" placeholder="Search by Subject" [(ngModel)]="subjectSearch" (keyup)="performSearch()">
+            </div>
+            <br>
+
+          
+            <br>
+            <ul class="book-list">
+                <li *ngFor="let book of (searchPerformed ? searchResults : books)" class="book-item">
+                    <div class="book-details">
+                        <p><strong>Title:</strong> {{ book.title }}</p>
+                        <p><strong>Author:</strong> {{ book.author }}</p>
+                        <p><strong>Subject:</strong> {{ book.subject }}</p>
+                        <p><strong>Publish Date:</strong> {{  formatDate( book.publish_date )}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+<!-- 
+<body>
+    <app-nav></app-nav>
+
+    <main>
+        <div class="container">
+            <br>
+            <h2>Books</h2>
+            <br>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search by Title" [(ngModel)]="titleSearch" (keyup)="performSearch()">
+                <input type="text" placeholder="Search by Author" [(ngModel)]="authorSearch" (keyup)="performSearch()">
+                <input type="text" placeholder="Search by Subject" [(ngModel)]="subjectSearch" (keyup)="performSearch()">
+            </div>
+            <ul class="book-list">
+                <li *ngFor="let book of (searchPerformed ? searchResults : books)" class="book-item">
+                    <div class="book-details">
+                        <p><strong>Title:</strong> {{ book.title }}</p>
+                        <p><strong>Author:</strong> {{ book.author }}</p>
+                        <p><strong>Subject:</strong> {{ book.subject }}</p>
+                        <p><strong>Publish Date:</strong> {{ formatDate(book.publish_date) }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body> -->

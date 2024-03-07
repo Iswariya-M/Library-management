@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif; /* Use any preferred font family */
+    margin: 0;
+    padding: 0;
+    background-color: #ded4d4; /* Background color for the body */
+}
+
+.container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for positioning */
+    align-items: center; /* Vertically center items */
+}
+
+.search-container input[type="text"] {
+    width: 75%; /* Adjust width as needed */
+    padding: 15px; /* Increase padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px; /* Increase font size */
+}
+
+.search-container button {
+    margin-left: 10px; /* Add space between search bar and clear button */
+    padding: 15px 30px; /* Increase button padding */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Increase font size */
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+.book-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.book-item {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.book-details {
+    background-color: #f2f2f2; /* Background color for book details box */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center align content */
+}
+
+.book-details p {
+    margin: 10px 0; /* Adjust spacing */
+}
+
+.book-details p strong {
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 50px; /* Adjust the height as needed */
+  }
+  
+  .search-bar input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .search-bar input:last-child {
+    margin-right: 0;
+  }
+  
